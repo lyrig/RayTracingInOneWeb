@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My First Web Demo!</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div id="page-container"> 
+            <div id="main-nav">main-nav
+                <div id="Selector">
+                    <select name="model-selector1" id="model-selector1">
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                    </select>
+                    <select name="model-selector2" id="model-selector2">
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                    </select>
+                    <select name="model-selector2" id="model-selector2">
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                    </select>
+                </div>
+            </div>
+            <div id="multi">
+                <div id="content">
+                    <div id="CameraControler">
+                        <button id="Upbtn" class="CameraMove">镜头向上移动</button>
+                        <button id="Downbtn" class="CameraMove">镜头向下移动</button>
+                        <button id="Leftbtn" class="CameraMove">镜头向左移动</button>
+                        <button id="Rightbtn" class="CameraMove">镜头向右移动</button>
+                        <button id="Frontbtn" class="CameraMove">镜头向前移动</button>
+                        <button id="Backbtn" class="CameraMove">镜头向后移动</button>
+                        <input type="range" id="stepsize" class="slider" min="0" max="1" value="0.5" step="0.01">
+                        <div class="value-display" id="valueDisplay">0</div>
+                    </div>
+                    <div id="ParametersControler">
+                        <div id="Pcontent">相机参数</div>
+                        <input type="range" id="sample_per_pixel" class="slider" min="1" max="400" value="10" step="1">
+                        <div class="value-display" id="DisplaySample">采样数:10</div>
+                        <input type="range" id="max_dpeth" class="slider" min="1" max="100" value="10" step="1">
+                        <div class="value-display" id="DisplayDepth">光线反射深度:10</div>
+                        <input type="range" id="dist_to_focus" class="slider" min="1" max="100" value="10" step="1">
+                        <div class="value-display" id="DisplayDtf">焦距:</div>
+                        <input type="range" id="aperture" class="slider" min="0.1" max="5" value="0.1" step="0.1">
+                        <div class="value-display" id="DisplayApe">光圈孔径: 1</div>
+                        <input type="range" id="num_generate" class="slider" min="3" max="100" value="3" step="1">
+                        <div class="value-display" id="DisplayNum">物体数目: 3</div>
+                        <button id="Activate" class="CameraMove">确认设置</button>
+                    </div>
+                </div> 
+                <div id="footer">
+                    <!-- <div id="desk"> desk </div>  -->
+                    <div id="frame-buffer" class="image-container">
+                        <!-- <img src="img/R.png" alt=""> -->
+                        <canvas id="MainCanvas"></canvas>
+                        <script src="./scripts/typescripts/dist/bundle.js"></script>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar-a">
+                <div id="pro">完成进度</div>
+                <progress id="Progress" value="0" max="100"> 0% </progress>
+            </div>
+        </div>
+    </body>
+</html>

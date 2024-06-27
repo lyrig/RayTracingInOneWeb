@@ -1,0 +1,298 @@
+#page-container 
+{
+    overflow: hidden;
+    width: 100vw;
+    height:100vh;
+    position: relative;
+    margin: auto;
+    background: red;
+	text-align: center;
+}
+
+html.body 
+{
+    margin: auto;
+    height:100%;
+    width:100%;
+    font-family:Sans-serif;
+    font-size: 16px;
+    color: #666666;
+    background: #ffffff;
+}
+.hidden {display: none;}
+
+#main-nav 
+{
+    background: khaki;
+    /*position:absolute;会导致main-nav高度不符*/
+    height:20%;
+    width:100%;
+    border-style: dotted;/*点线*/
+    overflow: hidden;
+}
+
+#multi
+{
+    background: black;
+    height:60%;
+    width:100%;
+    float:auto;
+    font-family: "黑体";
+    text-decoration: underline; 
+}
+
+#content 
+{
+    display: grid;
+    background:cyan ;
+    clear: both;
+    height:100%;
+    width:19.9%;
+    float:left;
+    font-family: "黑体";
+    text-decoration: underline; 
+    border-style:none;
+}
+
+
+#footer 
+{
+    background: green;
+    width:80%;
+    height:100%;
+    float:right;
+} 
+/* #desk
+{
+    clear: both;
+    margin:auto;
+    background: pink;
+    width:100%;
+    height:20%;
+}  */
+#frame-buffer
+{
+    background: yellow;
+    float:left;
+    width:100%;
+    height:100%;
+    border-style:solid;
+} 
+
+#block
+{
+    clear: both;
+    background: lavender ;
+    float:right;
+    width:20%;
+    height:100%;
+    border-style:solid;
+} 
+
+
+#sidebar-a 
+{
+    clear:both;
+    background: tomato;
+    height:20%;
+    text-decoration: underline; 
+    font-family: "华文新魏";
+    border-style:dashed; /*虚线*/
+}
+
+#Selector {
+    background: green;
+    width:80%;
+    height:100%;
+    float:left;
+    display: flex;
+    gap: 1%;
+}
+/* 样式整体选择框 */
+select {
+    appearance: none; /* 移除默认的样式 */
+    width: 50%; /* 设置宽度 */
+    height: 30%;
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 8px; /* 圆角 */
+    background-color: #6e6e6e; /* 背景色 */
+    font-size: 16px; /* 字体大小 */
+    color: #cfcfcf; /* 字体颜色 */
+    outline: none; /* 移除聚焦时的轮廓 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+    position: relative; /* 使箭头定位有效 */
+  }
+  
+  /* 鼠标悬停效果 */
+  select:hover {
+    border-color: #888; /* 改变边框颜色 */
+  }
+  
+  /* 聚焦效果 */
+  select:focus {
+    border-color: #c5ffa4; /* 改变边框颜色 */
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.5); /* 添加阴影 */
+  }
+  
+  /* 样式下拉箭头 */
+  select::after {
+    content: '▼'; /* 下拉箭头 */
+    position: absolute; /* 绝对定位 */
+    right: 10px; /* 右边距 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 垂直居中 */
+    pointer-events: none; /* 禁用鼠标事件 */
+    font-size: 14px; /* 字体大小 */
+    color: #888; /* 字体颜色 */
+  }
+  
+  /* 样式下拉列表项 */
+  select option {
+    padding: 10px; /* 内边距 */
+    background-color: #6e6e6e; /* 背景色 */
+    color: #333; /* 字体颜色 */
+    border-radius: 10px; /* 圆角 */
+  }
+
+  .image-container img {
+    max-width: 100%; /* 图片宽度最大适应父块元素 */
+    max-height: 100%; /* 图片高度最大适应父块元素 */
+    object-fit: cover; /* 保持图片的长宽比例并裁剪多余部分 */
+  }
+  .image-container canvas {
+    width: 100%; /* 图片宽度最大适应父块元素 */
+    height: 100%; /* 图片高度最大适应父块元素 */
+    object-fit: cover; /* 保持图片的长宽比例并裁剪多余部分 */
+  }
+
+/* 按钮设置 */
+
+#CameraControler{
+  display: grid;
+  grid-template-columns: repeat(3, 50pt);
+  grid-template-rows: repeat(3, 50pt);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 200pt;
+  background-color: #f8f9fa;
+}
+
+/* 基本按钮样式 */
+/* .CameraMove {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 30pt 30pt;
+  border-radius: 50pt;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+} */
+.CameraMove{
+  height: 50pt;
+  width: 50pt;
+}
+
+/* 设置按钮在grid中的位置 */
+#Upbtn {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#Leftbtn {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#Downbtn {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#Rightbtn {
+  grid-column: 3 / 3;
+  grid-row: 2 / 3;
+}
+/* 主按钮悬停样式 */
+.CameraMove:hover {
+  background-color: #68f893; /* 较深的蓝色背景 */
+}
+.slider {
+  width:100pt;
+}
+.value-display {
+  margin-top: 10px;
+  font-size: 20px;
+  user-select:none;
+}
+
+
+/* 设置按钮排列 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* 浅灰色背景 */
+}
+
+button {
+  margin: 10px; /* 按钮之间的间距 */
+}
+
+/*参数设置*/
+#Pcontent{
+  font-size: 50pt;
+  font-style: normal;
+  color: #faa332;
+  text-decoration: none;
+}
+progress {
+  width: 50%;
+  height: 30px;
+  -webkit-appearance: none;
+  appearance: none;
+  color: #ff0000;
+}
+
+/* Webkit浏览器（Chrome、Safari）的进度条样式 */
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Firefox浏览器的进度条样式 */
+progress::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+/* 更改进度条文本（如果需要显示进度百分比） */
+progress::before {
+  content: attr(value) '%';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+}
+
+/* IE和Edge浏览器的进度条样式 */
+progress::-ms-fill {
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+#pro{
+  font-size: 40pt;
+  user-select: none;
+  color: #00ff15;
+}
